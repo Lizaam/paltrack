@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RandomDataService } from './random-data.service';
+import { UserDataService } from './user-data.service';
 
-describe('RandomDataService', () => {
-  let service: RandomDataService;
+describe('UserDataService', () => {
+  let service: UserDataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(RandomDataService);
+    service = TestBed.inject(UserDataService);
   });
 
   it('should be created', () => {

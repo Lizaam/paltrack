@@ -13,9 +13,23 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.routeChangeSubscription();
+  }
+
+  private routeChangeSubscription(): void {
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        event.url.substring(1) === 'login' ? this.showMenu = false : this.showMenu = true;
+        const url = event.url.substring(1);
+
+        switch (url) {
+          case '':
+          case 'login':
+            this.showMenu = false;
+            break;
+          default:
+            this.showMenu = true;
+            break;
+        }
       }
     });
   }

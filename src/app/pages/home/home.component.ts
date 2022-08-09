@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
-import { RandomDataService } from 'src/app/services/random-data.service';
+import { UserDataService } from 'src/app/services/user-data.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   public users: User[] = [];
 
   constructor(
-    private randomDataService: RandomDataService
+    private userDataService: UserDataService
   ) { }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   private async initializeHomeRequests(): Promise<void> {
     try {
-      this.users = await this.randomDataService.getRandomData();
+      this.users = await this.userDataService.getUserData();
     } catch (error: any) {
       throw new Error(error);
     }

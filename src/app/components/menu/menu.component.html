@@ -1,4 +1,4 @@
-<div *ngIf="showMenu" class="bg-light mb-4">
+<div class="bg-light mb-4">
   <nav class="container navbar navbar-expand-lg justify-content-between">
     <div class="navbar-brand">Paltrack Lty Ltd.</div>
   
@@ -6,7 +6,7 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="nav-link">
-            <button class="btn btn-primary" (click)="showBonusRound()">
+            <button class="btn btn-primary" routerLink="/bonus">
               <i class="fa fa-question"></i>
               Bonus Round
             </button>

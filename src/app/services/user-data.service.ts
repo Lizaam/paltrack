@@ -6,10 +6,10 @@ import { User } from '../models/user';
 @Injectable({
   providedIn: 'root',
 })
-export class RandomDataService {
+export class UserDataService {
   constructor(private httpClient: HttpClient) {}
 
-  public async getRandomData(): Promise<User[]> {
+  public async getUserData(): Promise<User[]> {
     return await lastValueFrom(
       this.httpClient
         .get<User[]>('assets/data/data.json')
