@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { lastValueFrom, timeout } from 'rxjs';
-import { User } from '../models/data';
+import { lastValueFrom } from 'rxjs';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
