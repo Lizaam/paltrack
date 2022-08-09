@@ -15,10 +15,10 @@ export class BonusComponent {
   ) { }
 
   ngOnInit(): void {
-    this.initializeHomeRequests();
+    this.initializeBonusRequests();
   }
 
-  private async initializeHomeRequests(): Promise<void> {
+  private async initializeBonusRequests(): Promise<void> {
     try {
       this.users = await this.randomDataService.getRandomData();
     } catch (error: any) {
