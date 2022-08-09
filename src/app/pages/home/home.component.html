@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col bg-light border p-3">Name</div>
+    <div class="col bg-light border p-3">Phone</div>
+    <div class="col bg-light border p-3">Email</div>
+    <div class="col bg-light border p-3">Address</div>
+    <div class="col bg-light border p-3">Postal Zip</div>
+  </div>
+  <div class="row" *ngFor="let user of users">
+    <div class="col border p-3">
+      {{ user?.name }}
+    </div>
+    <div class="col border p-3">
+      {{ user?.phone }}
+    </div>
+    <div class="col border p-3">
+      {{ user?.email }}
+    </div>
+    <div class="col border p-3">
+      {{ user?.address }}
+    </div>
+    <div class="col border p-3">
+      {{ user?.postalZip }}
+    </div>
+  </div>
+</div>

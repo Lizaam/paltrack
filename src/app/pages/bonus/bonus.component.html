@@ -1,0 +1,28 @@
+<div class="container">
+  <dx-data-grid
+    [dataSource]="users"
+    [remoteOperations]="false"
+    [allowColumnReordering]="true"
+    [rowAlternationEnabled]="true"
+    [showBorders]="true"
+  >
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager
+      [showPageSizeSelector]="true"
+      [allowedPageSizes]="[10, 25]"
+    ></dxo-pager>
+    <dxo-search-panel
+      [visible]="true"
+      [highlightCaseSensitive]="true"
+    ></dxo-search-panel>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-grouping [autoExpandAll]="true"></dxo-grouping>
+
+    <dxi-column alignment="left" dataField="Users" [groupIndex]="0"></dxi-column>
+    <dxi-column alignment="left" dataField="name" dataType="string"></dxi-column>
+    <dxi-column alignment="left" dataField="phone" dataType="string"></dxi-column>
+    <dxi-column alignment="left" dataField="email" dataType="string"></dxi-column>
+    <dxi-column alignment="left" dataField="address" dataType="string"></dxi-column>
+    <dxi-column alignment="left" dataField="postalZip" dataType="number"></dxi-column>
+  </dx-data-grid>
+</div>
